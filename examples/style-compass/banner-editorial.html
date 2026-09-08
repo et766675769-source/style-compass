@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style Compass · Banner · editorial-calm</title>
+<!-- 风格: editorial-calm (编辑留白 · 冷调克制) · 新闻规则: 信息块化 + 块间呼吸 + 单一中性 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@200;400;500;900&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#F7F5F1;--ink:#23201C;--ink2:#4A463F;--dim:#8A867E;--faint:#C4C0B8;--rule:#D9D5CD;
+    --sans:'Noto Sans SC','Montserrat',system-ui,sans-serif;--en:'Montserrat','Noto Sans SC',sans-serif}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:#EDEAE5;color:var(--ink);font-family:var(--sans);display:grid;place-items:center;min-height:100vh;padding:28px;-webkit-font-smoothing:antialiased}
+  .banner{width:min(94vw,1100px);aspect-ratio:21/9;position:relative;background:var(--paper);display:flex;align-items:stretch;box-shadow:0 30px 70px rgba(0,0,0,.1)}
+  .left{flex:1.5;padding:30px 36px;display:flex;flex-direction:column;justify-content:center;min-width:0}
+  .brand{display:flex;align-items:baseline;gap:10px;font-family:var(--en);font-size:13px;font-weight:600;color:var(--dim);margin-bottom:30px}
+  .brand .sp{color:var(--ink);font-weight:800}
+  .brand small{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+  h1{font-weight:900;line-height:1.04;letter-spacing:-.05em;font-size:clamp(2.2rem,4.8vw,3.8rem);color:var(--ink)}
+  h1 .thin{font-weight:200;color:var(--ink2)}
+  .lead{margin-top:22px;font-size:13px;color:var(--dim);line-height:1.8;max-width:430px}
+  .right{flex:1;padding:30px 36px;border-left:1px solid var(--rule);display:flex;flex-direction:column;justify-content:center}
+  .right .cap{font-family:var(--en);font-size:10px;color:var(--faint);letter-spacing:.18em;text-transform:uppercase;margin-bottom:16px}
+  .row{padding:13px 0;border-top:1px solid var(--rule);display:flex;align-items:baseline;gap:16px}
+  .row:last-child{border-bottom:1px solid var(--rule)}
+  .row .num{font-family:var(--en);font-size:10px;color:var(--faint)}
+  .row .cn{font-size:14px;font-weight:500;color:var(--ink);width:88px}
+  .row .en{font-family:var(--en);font-size:10px;color:var(--faint);letter-spacing:.08em;text-transform:uppercase;margin-left:auto}
+  .row:first-child .cn{font-weight:700}
+  .foot{position:absolute;bottom:0;left:0;right:0;padding:12px 36px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;font-family:var(--en);font-size:10px;color:var(--faint);letter-spacing:.06em}
+  .foot b{color:var(--ink2)}
+</style>
+</head>
+<body>
+  <div class="banner">
+    <div class="left">
+      <div class="brand"><span class="sp">STYLE</span> COMPASS <small>Open Source</small></div>
+      <h1>让 AI 有<span class="thin">设计</span>品味</h1>
+      <p class="lead">把认可的高审美案例，蒸馏成介质无关的视觉规范——一套品味，网页 / PPT / UI / 平面通吃。</p>
+    </div>
+    <div class="right">
+      <div class="cap">Five Styles</div>
+      <div class="row"><span class="num">01</span><span class="cn">编辑留白</span><span class="en">editorial-calm</span></div>
+      <div class="row"><span class="num">02</span><span class="cn">素雅极简</span><span class="en">clean-minimal</span></div>
+      <div class="row"><span class="num">03</span><span class="cn">暗夜玻璃</span><span class="en">dark-glass</span></div>
+      <div class="row"><span class="num">04</span><span class="cn">暗调辉光</span><span class="en">dark-glow</span></div>
+      <div class="row"><span class="num">05</span><span class="cn">撞色怪诞</span><span class="en">bold-playful</span></div>
+    </div>
+    <div class="foot"><span><b>规范与介质解耦</b> · 审美可参数化</span><span>✦</span></div>
+  </div>
+</body>
+</html>

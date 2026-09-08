@@ -3,53 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Style Compass · Banner</title>
+<title>Style Compass · Banner · dark-glass</title>
 <!--
-  style-compass 介质无关验证 · 介质: Banner (横幅，README 顶部用)
-  风格: style-dark-glass；画布: 宽幅 21:9 概念比例，用 vw/vh 模拟
+  style-compass 介质无关验证 · 介质: Banner (21:9 横幅)
+  风格: style-dark-glass (暗夜玻璃 · 沉浸科技)
+  新规则应用: 信息块独立成型(标题块/风格块/落款块) + 块间呼吸 + 单一强调色(青)
 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{--bg:#0B0B10;--ink:#F5F5F7;--ink-dim:rgba(245,245,247,.6);--ink-faint:rgba(245,245,247,.34);
     --accent:#22D3EE;--line:rgba(255,255,255,.1);--glow:0 0 26px rgba(34,211,238,.4)}
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%}
-  body{background:#000;color:var(--ink);font-family:'Inter','PingFang SC',system-ui,sans-serif;
+  body{background:#000;color:var(--ink);font-family:'Noto Sans SC','Montserrat',system-ui,sans-serif;
     display:grid;place-items:center;min-height:100vh;padding:28px;-webkit-font-smoothing:antialiased}
-  .banner{
-    width:min(94vw,1100px);aspect-ratio:21/9;border-radius:20px;overflow:hidden;position:relative;
-    background:radial-gradient(600px 300px at 82% 20%,rgba(34,211,238,.22),transparent 60%),
-      radial-gradient(500px 280px at 6% 100%,rgba(167,139,250,.16),transparent 62%),
+  .banner{width:min(94vw,1100px);aspect-ratio:21/9;border-radius:20px;overflow:hidden;position:relative;
+    background:radial-gradient(600px 300px at 82% 16%,rgba(34,211,238,.22),transparent 58%),
+      radial-gradient(520px 300px at 5% 100%,rgba(167,139,250,.16),transparent 60%),
       linear-gradient(120deg,#0e0e16,#0a0a10);
     border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 80px rgba(0,0,0,.6);
-    padding:34px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px
-  }
-  .brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:20px;letter-spacing:-.02em}
-  .brand .dot{width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:var(--glow)}
-  .headline h1{font-size:clamp(1.5rem,3.6vw,2.6rem);letter-spacing:-.03em;font-weight:800;line-height:1.1;
+    padding:30px 40px;display:flex;align-items:center;gap:40px}
+  /* 左侧标题块 */
+  .intro{flex:1;min-width:0}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:18px;letter-spacing:-.02em;margin-bottom:22px}
+  .brand .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:var(--glow)}
+  .brand small{font-family:Montserrat;font-size:10px;letter-spacing:.16em;color:var(--ink-faint);font-weight:700;margin-left:6px}
+  .headline h1{font-size:clamp(2rem,4.4vw,3.3rem);letter-spacing:-.03em;font-weight:900;line-height:1.05;
     background:linear-gradient(180deg,#fff 30%,rgba(255,255,255,.55));-webkit-background-clip:text;background-clip:text;color:transparent}
   .headline h1 .hl{color:var(--accent);-webkit-text-fill-color:var(--accent)}
-  .headline p{color:var(--ink-dim);font-size:14px;margin-top:8px;max-width:460px}
-  .chips{display:flex;gap:10px;flex-wrap:wrap;max-width:300px;justify-content:flex-end}
-  .chip{font-size:12px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);color:var(--ink-dim);
-    background:rgba(255,255,255,.03);white-space:nowrap}
-  .chip.hot{color:var(--accent);border-color:rgba(34,211,238,.35);background:rgba(34,211,238,.08)}
-  @media(max-width:640px){.banner{flex-direction:column;align-items:flex-start}.chips{max-width:100%;justify-content:flex-start}}
+  .headline p{color:var(--ink-dim);font-size:13.5px;margin-top:16px;max-width:440px;line-height:1.7}
+  /* 右侧风格块 */
+  .styles{flex:0 0 420px;display:flex;flex-direction:column;gap:0}
+  .styles .cap{font-family:Montserrat;font-size:10px;color:var(--ink-faint);letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px}
+  .row{display:flex;align-items:center;gap:14px;padding:11px 0;border-top:1px solid var(--line)}
+  .row:last-child{border-bottom:1px solid var(--line)}
+  .row .sw{width:16px;height:16px;border-radius:5px;flex-shrink:0}
+  .row .cn{font-size:13px;font-weight:700;color:var(--ink);width:86px}
+  .row .en{font-family:Montserrat;font-size:11px;color:var(--ink-faint);margin-left:auto;letter-spacing:.04em}
 </style>
 </head>
 <body>
   <div class="banner">
-    <div>
-      <div class="brand"><span class="dot"></span> Style Compass</div>
-      <div class="headline">
-        <h1>让 AI 有<span class="hl">设计品味</span></h1>
-        <p>把高审美案例蒸馏成介质无关的视觉规范 — 网页、PPT、UI、平面通吃。</p>
-      </div>
+    <div class="intro">
+      <div class="brand"><span class="dot"></span> Style Compass <small>OPEN SOURCE</small></div>
+      <div class="headline"><h1>让 AI 有<span class="hl">设计品味</span></h1>
+        <p>把认可的高审美案例，蒸馏成介质无关的视觉规范——一套品味，网页 / PPT / UI / 平面通吃。</p></div>
     </div>
-    <div class="chips">
-      <span class="chip hot">Open Source</span>
-      <span class="chip">5 风格库</span>
-      <span class="chip">介质无关</span>
-      <span class="chip">Agent Skill</span>
+    <div class="styles">
+      <div class="cap">Five Styles</div>
+      <div class="row"><span class="sw" style="background:#22D3EE"></span><span class="cn">编辑留白</span><span class="en">editorial-calm</span></div>
+      <div class="row"><span class="sw" style="background:#A3E635"></span><span class="cn">素雅极简</span><span class="en">clean-minimal</span></div>
+      <div class="row"><span class="sw" style="background:#A78BFA"></span><span class="cn">暗夜玻璃</span><span class="en">dark-glass</span></div>
+      <div class="row"><span class="sw" style="background:#E85D3A"></span><span class="cn">暗调辉光</span><span class="en">dark-glow</span></div>
+      <div class="row"><span class="sw" style="background:#FF5A00"></span><span class="cn">撞色怪诞</span><span class="en">bold-playful</span></div>
     </div>
   </div>
 </body>
