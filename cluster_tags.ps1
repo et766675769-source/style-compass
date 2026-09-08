@@ -1,10 +1,15 @@
-﻿# 聚类辅助脚本：统计标注卡气质标签的词频与共现
-# 用法: ./cluster_tags.ps1
-# 输出: 在 _标注 目录生成 tag_analysis.md
+# 聚类辅助脚本：统计标注卡气质标签的词频与共现
+# 用法: ./cluster_tags.ps1 [-AnnoDir <路径>]
+# 默认扫描当前目录下的 _标注 文件夹（或由 -AnnoDir 指定你的案例卡目录）
+# 输出: 在标注目录生成 tag_analysis.md
+
+param(
+    [string]$AnnoDir = (Join-Path (Get-Location) '_annotations')
+)
 
 $ErrorActionPreference = 'Stop'
-$dir = 'E:\工作\网站参考\蒸馏区域\_标注'
-if (-not (Test-Path $dir)) { Write-Output "标注目录不存在: $dir"; exit 1 }
+$dir = $AnnoDir
+if (-not (Test-Path $dir)) { Write-Output "标注目录不存在: $dir（可用 -AnnoDir 指定，或用 ./cluster_tags.ps1 -AnnoDir <你的标注目录>）"; exit 1 }
 $files = Get-ChildItem $dir -Filter 'case-*.md' -File
 
 $wordCount = @{}
