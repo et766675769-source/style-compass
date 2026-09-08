@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style Compass · 视觉设计</title>
+<!--
+  style-compass 介质无关验证 · 介质: 视觉设计 (Visual / 品牌概念视觉)
+  风格: style-dark-glass；表现"一套原语 → 多种介质"的抽象主视觉。
+-->
+<style>
+  :root{--bg:#0B0B10;--ink:#F5F5F7;--accent:#22D3EE;--accent2:#A3E635;--purple:#A78BFA;
+    --line:rgba(255,255,255,.1);--glow:0 0 30px rgba(34,211,238,.45)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:#000;color:var(--ink);font-family:'Inter','PingFang SC',system-ui,sans-serif;
+    display:grid;place-items:center;min-height:100vh;padding:28px;-webkit-font-smoothing:antialiased;overflow:hidden}
+  .visual{width:min(94vw,900px);aspect-ratio:4/3;border-radius:22px;overflow:hidden;position:relative;
+    background:radial-gradient(700px 460px at 75% 18%,rgba(34,211,238,.2),transparent 60%),
+      radial-gradient(560px 420px at 10% 96%,rgba(167,139,250,.16),transparent 62%),
+      linear-gradient(160deg,#0d0d15,#08080d);
+    border:1px solid rgba(255,255,255,.08);box-shadow:0 40px 100px rgba(0,0,0,.65)}
+  /* 中心语义：一束原语光扩散成多种介质面板 */
+  .core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;z-index:3}
+  .core .orb{width:120px;height:120px;margin:0 auto 22px;border-radius:50%;position:relative;
+    background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.8),var(--accent) 45%,rgba(34,211,238,.3) 70%,transparent);
+    box-shadow:var(--glow);animation:breathe 3.5s ease-in-out infinite}
+  @keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+  .core .orb::after{content:'';position:absolute;inset:-34px;border-radius:50%;border:1px solid rgba(34,211,238,.3);animation:ring 3.5s infinite}
+  @keyframes ring{0%{transform:scale(.8);opacity:.8}100%{transform:scale(1.4);opacity:0}}
+  .core h1{font-size:clamp(1.6rem,3.4vw,2.4rem);letter-spacing:-.03em;font-weight:800;
+    background:linear-gradient(180deg,#fff 30%,rgba(255,255,255,.6));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .core h1 span{color:var(--accent);-webkit-text-fill-color:var(--accent)}
+  .core p{color:var(--ink-dim);font-size:14px;margin-top:10px;max-width:400px}
+  /* 环绕的介质面板 */
+  .panel{position:absolute;border-radius:14px;border:1px solid var(--line);backdrop-filter:blur(6px);
+    background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.01));padding:14px 18px;
+    display:flex;align-items:center;gap:12px;box-shadow:0 20px 50px rgba(0,0,0,.5);transition:.3s}
+  .panel:hover{transform:translateY(-3px);border-color:rgba(34,211,238,.4)}
+  .panel .icon{font-size:20px}
+  .panel .txt small{display:block;font-size:11px;color:var(--ink-faint)}
+  .panel .txt b{font-size:14px;color:var(--ink)}
+  .p1{left:6%;top:16%}.p2{right:6%;top:14%}.p3{left:10%;bottom:18%}.p4{right:8%;bottom:20%}
+  .p5{left:38%;top:4%}.p6{right:32%;bottom:6%}
+  /* 网格点缀 */
+  .grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:44px 44px;z-index:1}
+  /* 底部标签 */
+  .label{position:absolute;bottom:16px;left:22px;font-size:11px;color:var(--ink-faint);letter-spacing:.12em;text-transform:uppercase;z-index:4}
+  .brandmark{position:absolute;top:16px;right:22px;display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px;z-index:4}
+  .brandmark .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:var(--glow)}
+</style>
+</head>
+<body>
+  <div class="visual">
+    <div class="grid-bg"></div>
+
+    <div class="core">
+      <div class="orb"></div>
+      <h1>一套原语 · <span>多种介质</span></h1>
+      <p>Style Compass 把视觉本质（色彩比例、层级、留白）蒸馏成规范，再翻译成每个介质的具体参数。</p>
+    </div>
+
+    <div class="panel p1"><div class="icon">🌐</div><div class="txt"><small>Web</small><b>style-dark-glass</b></div></div>
+    <div class="panel p2"><div class="icon">📊</div><div class="txt"><small>PPT</small><b>16:9 · 玻璃面板</b></div></div>
+    <div class="panel p3"><div class="icon">📱</div><div class="txt"><small>UI</small><b>暗夜 · 发光</b></div></div>
+    <div class="panel p4"><div class="icon">🎨</div><div class="txt"><small>平面</small><b>撞色 · 大字</b></div></div>
+    <div class="panel p5"><div class="icon">🎬</div><div class="txt"><small>视觉</small><b>沉浸 · 光晕</b></div></div>
+    <div class="panel p6"><div class="icon">🧠</div><div class="txt"><small>原语</small><b>介质无关</b></div></div>
+
+    <div class="brandmark"><span class="dot"></span> Style Compass</div>
+    <div class="label">Visual Concept · medium-agnostic</div>
+  </div>
+</body>
+</html>

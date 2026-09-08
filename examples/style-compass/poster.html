@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style Compass · 海报</title>
+<!--
+  style-compass 介质无关验证 · 介质: 平面/海报 (Poster)
+  风格: style-dark-glass；画布: 竖版 A 比例 (1080x1440 概念比例，用 vh/vw 模拟)
+-->
+<style>
+  :root{
+    --bg:#0B0B10; --ink:#F5F5F7; --ink-dim:rgba(245,245,247,.6); --ink-faint:rgba(245,245,247,.35);
+    --accent:#22D3EE; --accent2:#A3E635; --purple:#A78BFA;
+    --line:rgba(255,255,255,.1); --radius:20px;
+    --glow:0 0 30px rgba(34,211,238,.4);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    background:#000;color:var(--ink);font-family:'Inter','PingFang SC',system-ui,sans-serif;
+    display:grid;place-items:center;min-height:100vh;padding:32px;-webkit-font-smoothing:antialiased;
+  }
+  /* 海报画布：竖版 3:4 */
+  .poster{
+    width:min(92vw,520px);aspect-ratio:3/4;border-radius:24px;overflow:hidden;position:relative;
+    background:radial-gradient(420px 340px at 78% 12%,rgba(34,211,238,.2),transparent 62%),
+      radial-gradient(380px 320px at 8% 92%,rgba(167,139,250,.18),transparent 60%),
+      linear-gradient(180deg,#0d0d14,#0a0a10);
+    border:1px solid rgba(255,255,255,.08);box-shadow:0 40px 90px rgba(0,0,0,.6);
+    padding:36px 34px;display:flex;flex-direction:column;justify-content:space-between;
+  }
+  .top{display:flex;align-items:center;justify-content:space-between}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em;font-size:17px}
+  .logo .dot{width:13px;height:13px;border-radius:50%;background:var(--accent);box-shadow:var(--glow)}
+  .mini{font-size:12px;color:var(--ink-faint)}
+  .head{text-align:center;padding:20px 0 8px}
+  .tag{font-size:12.5px;letter-spacing:.16em;color:var(--accent);text-transform:uppercase;margin-bottom:16px}
+  .head h1{font-size:clamp(2.3rem,10vw,3.4rem);line-height:1.05;letter-spacing:-.04em;font-weight:800;
+    background:linear-gradient(180deg,#fff 25%,rgba(255,255,255,.55));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .head h1 .hl{color:var(--accent);-webkit-text-fill-color:var(--accent)}
+  .head p{color:var(--ink-dim);font-size:14.5px;max-width:74%;margin:14px auto 0;line-height:1.7}
+  .mid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:6px 0}
+  .pill{padding:13px 10px;text-align:center;border-radius:16px;border:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.01));transition:.3s}
+  .pill:hover{border-color:rgba(34,211,238,.4);transform:translateY(-2px)}
+  .pill .p-k{font-size:11px;color:var(--ink-faint);margin-bottom:4px}
+  .pill .p-v{font-size:14px;font-weight:600}
+  .swatch{height:6px;width:34px;border-radius:3px;margin:0 auto 8px}
+  .concept{margin-top:auto;padding-top:20px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+  .concept .left{font-size:12.5px;color:var(--ink-dim);max-width:60%}
+  .concept .left b{color:var(--ink)}
+  .concept .qr{font-size:26px;display:grid;place-items:center;color:var(--accent);opacity:.85}
+</style>
+</head>
+<body>
+  <div class="poster">
+    <div class="top">
+      <div class="logo"><span class="dot"></span> Style Compass</div>
+      <div class="mini">OPEN SOURCE</div>
+    </div>
+    <div class="head">
+      <div class="tag">Give AI Taste</div>
+      <h1>让 AI<br>有<span class="hl">设计品味</span></h1>
+      <p>把认可的高审美案例，蒸馏成介质无关的视觉规范——网页、PPT、UI、平面，一套品味通吃。</p>
+    </div>
+    <div class="mid">
+      <div class="pill"><div class="swatch" style="background:#22D3EE"></div><div class="p-k">编辑留白</div><div class="p-v">editorial</div></div>
+      <div class="pill"><div class="swatch" style="background:#A3E635"></div><div class="p-k">素雅极简</div><div class="p-v">minimal</div></div>
+      <div class="pill"><div class="swatch" style="background:#A78BFA"></div><div class="p-k">暗夜玻璃</div><div class="p-v">dark-glass</div></div>
+      <div class="pill"><div class="swatch" style="background:#E85D3A"></div><div class="p-k">暗调辉光</div><div class="p-v">dark-glow</div></div>
+      <div class="pill"><div class="swatch" style="background:#FF5A00"></div><div class="p-k">高饱和撞色</div><div class="p-v">bold</div></div>
+      <div class="pill"><div class="swatch" style="background:#fff"></div><div class="p-k">介质无关</div><div class="p-v">any medium</div></div>
+    </div>
+    <div class="concept">
+      <div class="left"><b>五项风格 · 一种原则</b><br>规范与介质解耦，审美可参数化。</div>
+      <div class="qr">✦</div>
+    </div>
+  </div>
+</body>
+</html>
