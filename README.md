@@ -62,6 +62,32 @@ npx skills add https://github.com/et766675769-source/style-compass --skill "styl
 | **案例卡** | 单案例的结构化标注，区分"可迁移要素"与"介质特有要素"，是蒸馏的原料 |
 | **AI 味清单** | 跨介质与各介质专属的 AI 同质化特征 + 替代做法 |
 
+## 视觉预览
+
+同一套「Style Compass」品牌与「让 AI 有设计品味」主题，用内置五大风格分别落地成海报与横幅 —— 每种风格介质无关，可直接切换。
+
+### 五大风格 · 海报
+
+| 暗夜玻璃 | 撞色怪诞 | 素雅极简 |
+| --- | --- | --- |
+| ![dark-glass](examples/style-compass/_shots/poster.png) | ![bold-playful](examples/style-compass/_shots/poster-bold.png) | ![clean-minimal](examples/style-compass/_shots/poster-light.png) |
+
+| 编辑留白 | 暗调辉光 |
+| --- | --- |
+| ![editorial-calm](examples/style-compass/_shots/poster-editorial.png) | ![dark-glow](examples/style-compass/_shots/poster-glow.png) |
+
+### 五大风格 · Banner（横幅）
+
+| 暗夜玻璃 | 撞色怪诞 |
+| --- | --- |
+| ![dark-glass](examples/style-compass/_shots/banner-dark-glass.png) | ![bold-playful](examples/style-compass/_shots/banner-bold.png) |
+
+| 编辑留白 | 素雅极简 | 暗调辉光 |
+| --- | --- | --- |
+| ![editorial-calm](examples/style-compass/_shots/banner-editorial.png) | ![clean-minimal](examples/style-compass/_shots/banner-clean.png) | ![dark-glow](examples/style-compass/_shots/banner-glow.png) |
+
+> 介质无关验证与截图复现见 [`examples/style-compass/_验证报告.md`](examples/style-compass/_验证报告.md)。
+
 ## 参与贡献
 
 欢迎以这些方式参与 AI 开源事业：
