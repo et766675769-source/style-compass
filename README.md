@@ -41,7 +41,12 @@ npx skills add https://github.com/et766675769-source/style-compass --skill "styl
         ├── assets/             # 参考图、字体授权清单、对比图等
         └── references/
             ├── style-template.md                 # 风格文件母版
-            ├── style-example-editorial-calm.md   # 演示风格（成品示例）
+            ├── style-editorial-calm.md           # 正式风格：编辑式留白 · 冷调克制
+            ├── style-clean-minimal.md            # 正式风格：素雅极简 · 干净呼吸
+            ├── style-dark-glass.md               # 正式风格：暗夜玻璃 · 沉浸科技
+            ├── style-dark-glow.md                # 正式风格：暗调辉光 · 戏剧沉浸
+            ├── style-bold-playful.md             # 正式风格：高饱和撞色 · 怪诞大字
+            ├── style-example-editorial-calm.md   # 演示风格（成品示例，可删可留作默认）
             ├── case-card-template.md            # 案例标注卡模板
             ├── medium-mapping.md                # 介质映射：网页/UI/PPT/平面
             └── ai-tells.md                      # AI 味反模式清单

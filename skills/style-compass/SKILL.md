@@ -86,6 +86,11 @@ Style Compass 把"我觉得好看"转化为 Agent 能稳定执行的规范，并
 | `references/medium-mapping.md` | 应用模式第 4 步（按介质读对应章） | 把视觉原语翻译成各介质参数；各介质质量坑与交付检查 |
 | `references/ai-tells.md` | 每次产出后、审查既有作品 | "AI 味"反模式清单，逐条核对 |
 | `references/style-*.md` | 应用模式每次执行前 | 已蒸馏的风格库本体，从中提取 token |
+| `references/style-editorial-calm.md` | 应用模式，亮底编辑式场景 | 正式风格：编辑式留白 · 冷调克制 |
+| `references/style-clean-minimal.md` | 应用模式，干净可信场景 | 正式风格：素雅极简 · 干净呼吸 |
+| `references/style-dark-glass.md` | 应用模式，暗夜科技场景 | 正式风格：暗夜玻璃 · 沉浸科技 |
+| `references/style-dark-glow.md` | 应用模式，戏剧沉浸场景 | 正式风格：暗调辉光 · 戏剧沉浸 |
+| `references/style-bold-playful.md` | 应用模式，高饱和撞色场景 | 正式风格：高饱和撞色 · 怪诞大字 |
 | `references/style-example-editorial-calm.md` | 第一次读本 skill 时 | 演示成品：一份风格规范完整长什么样（可删可留作默认风格） |
 
 > 约定：`style-*.md` 是用户风格库本体。案例卡积累过多时，把增量并回对应风格文件后归档。
