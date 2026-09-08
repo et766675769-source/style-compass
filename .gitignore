@@ -1,0 +1,22 @@
+# 依赖与缓存
+node_modules/
+.pnpm-store/
+.vite/
+
+# 构建产物
+dist/
+build/
+out/
+
+# 编辑器和系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 案例素材体积较大时，建议用 Git LFS 而非提交普通文件
+# 若超 GitHub 单文件限制(100MB)，启用: git lfs track "assets/**"
+
+# Python 校验缓存
+__pycache__/
+*.pyc

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Style Compass 风格罗盘"
+  short_description: "为 AI 界面输出注入审美品味的视觉风格规范与设计参考指南"
+  default_prompt: "Use $style-compass to design this interface with refined, non-generic visual taste."
