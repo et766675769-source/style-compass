@@ -6,51 +6,68 @@
 <title>Style Compass · 海报</title>
 <!--
   style-compass 介质无关验证 · 介质: 平面/海报 (Poster)
-  风格: style-dark-glass；画布: 竖版 A 比例 (1080x1440 概念比例，用 vh/vw 模拟)
+  风格: style-dark-glass
+  字体: Google Fonts OFL 开源免费商用 —— 中文标题用思源宋体(Noto Serif SC), 英文用 Space Grotesk
+  布局: 主标题区居上 + 大片呼吸区 + 六卡区下沉贴底 → 突出标题
 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@700;800;900&family=Space+Grotesk:wght@400;500;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#0B0B10; --ink:#F5F5F7; --ink-dim:rgba(245,245,247,.6); --ink-faint:rgba(245,245,247,.35);
-    --accent:#22D3EE; --accent2:#A3E635; --purple:#A78BFA;
-    --line:rgba(255,255,255,.1); --radius:20px;
+    --accent:#22D3EE;
+    --line:rgba(255,255,255,.1); --radius:16px;
     --glow:0 0 30px rgba(34,211,238,.4);
+    --serif:'Noto Sans SC', system-ui, sans-serif;
+    --sans:'Montserrat', 'Space Grotesk', system-ui, sans-serif;
+    --logo:'Space Grotesk', 'Montserrat', system-ui, sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%}
   body{
-    background:#000;color:var(--ink);font-family:'Inter','PingFang SC',system-ui,sans-serif;
+    background:#000;color:var(--ink);font-family:var(--sans);
     display:grid;place-items:center;min-height:100vh;padding:32px;-webkit-font-smoothing:antialiased;
   }
   /* 海报画布：竖版 3:4 */
   .poster{
     width:min(92vw,520px);aspect-ratio:3/4;border-radius:24px;overflow:hidden;position:relative;
-    background:radial-gradient(420px 340px at 78% 12%,rgba(34,211,238,.2),transparent 62%),
-      radial-gradient(380px 320px at 8% 92%,rgba(167,139,250,.18),transparent 60%),
+    background:radial-gradient(460px 360px at 80% 8%,rgba(34,211,238,.22),transparent 62%),
+      radial-gradient(380px 320px at 10% 90%,rgba(167,139,250,.20),transparent 60%),
+      radial-gradient(320px 300px at 55% 55%,rgba(34,211,238,.08),transparent 62%),
       linear-gradient(180deg,#0d0d14,#0a0a10);
     border:1px solid rgba(255,255,255,.08);box-shadow:0 40px 90px rgba(0,0,0,.6);
-    padding:36px 34px;display:flex;flex-direction:column;justify-content:space-between;
+    padding:34px 32px;display:flex;flex-direction:column;
   }
   .top{display:flex;align-items:center;justify-content:space-between}
-  .logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em;font-size:17px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em;font-size:16px;font-family:var(--logo)}
   .logo .dot{width:13px;height:13px;border-radius:50%;background:var(--accent);box-shadow:var(--glow)}
-  .mini{font-size:12px;color:var(--ink-faint)}
-  .head{text-align:center;padding:20px 0 8px}
-  .tag{font-size:12.5px;letter-spacing:.16em;color:var(--accent);text-transform:uppercase;margin-bottom:16px}
-  .head h1{font-size:clamp(2.3rem,10vw,3.4rem);line-height:1.05;letter-spacing:-.04em;font-weight:800;
-    background:linear-gradient(180deg,#fff 25%,rgba(255,255,255,.55));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .mini{font-size:12px;color:var(--ink-faint);letter-spacing:.06em}
+
+  /* 主标题区：居上，下方让出呼吸 */
+  .head{text-align:left;margin-top:34px}
+  .tag{font-family:var(--sans);font-size:13px;letter-spacing:.3em;color:var(--accent);text-transform:uppercase;margin-bottom:24px;font-weight:700}
+  .head h1{font-family:var(--serif);font-weight:900;line-height:1.08;letter-spacing:-.02em;font-size:clamp(2.7rem,11.5vw,3.8rem);
+    background:linear-gradient(180deg,#fff 30%,rgba(255,255,255,.6));-webkit-background-clip:text;background-clip:text;color:transparent}
   .head h1 .hl{color:var(--accent);-webkit-text-fill-color:var(--accent)}
-  .head p{color:var(--ink-dim);font-size:14.5px;max-width:74%;margin:14px auto 0;line-height:1.7}
-  .mid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:6px 0}
-  .pill{padding:13px 10px;text-align:center;border-radius:16px;border:1px solid var(--line);
-    background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.01));transition:.3s}
-  .pill:hover{border-color:rgba(34,211,238,.4);transform:translateY(-2px)}
-  .pill .p-k{font-size:11px;color:var(--ink-faint);margin-bottom:4px}
-  .pill .p-v{font-size:14px;font-weight:600}
-  .swatch{height:6px;width:34px;border-radius:3px;margin:0 auto 8px}
-  .concept{margin-top:auto;padding-top:20px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
-  .concept .left{font-size:12.5px;color:var(--ink-dim);max-width:60%}
+  .head .intro{color:var(--ink-dim);font-size:13.5px;line-height:1.8;margin-top:26px;max-width:86%}
+
+  /* 六卡区：作为一个独立"块"，下沉贴底；块内密、与其他块之间放大间隔 */
+  .label-row{margin-top:auto;display:flex;align-items:center;color:var(--ink-faint);font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px}
+  .label-row::after{content:'';flex:1;height:1px;background:var(--line);margin-left:16px}
+  .mid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:20px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.02)}
+  .pill{padding:16px 12px;text-align:center;border-radius:14px;border:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));transition:.3s}
+  .pill:hover{border-color:rgba(34,211,238,.4)}
+  .pill .p-k{font-size:11px;color:var(--ink-faint);margin-bottom:8px;letter-spacing:.02em}
+  .pill .p-v{font-size:14px;font-weight:600;font-family:var(--sans)}
+  .swatch{height:6px;width:36px;border-radius:3px;margin:0 auto 10px}
+
+  /* 底部落款：与卡区之间留足间隔 */
+  .concept{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+  .concept .left{font-size:12.5px;color:var(--ink-dim);max-width:64%;line-height:1.5}
   .concept .left b{color:var(--ink)}
-  .concept .qr{font-size:26px;display:grid;place-items:center;color:var(--accent);opacity:.85}
+  .concept .qr{font-size:24px;display:grid;place-items:center;color:var(--accent);opacity:.85}
 </style>
 </head>
 <body>
@@ -61,9 +78,10 @@
     </div>
     <div class="head">
       <div class="tag">Give AI Taste</div>
-      <h1>让 AI<br>有<span class="hl">设计品味</span></h1>
-      <p>把认可的高审美案例，蒸馏成介质无关的视觉规范——网页、PPT、UI、平面，一套品味通吃。</p>
+      <h1>让 AI<br><span class="hl">有设计品味</span></h1>
+      <p class="intro">把认可的高审美案例，蒸馏成介质无关的视觉规范——网页、PPT、UI、平面，一套品味通吃。</p>
     </div>
+    <div class="label-row">Style Library</div>
     <div class="mid">
       <div class="pill"><div class="swatch" style="background:#22D3EE"></div><div class="p-k">编辑留白</div><div class="p-v">editorial</div></div>
       <div class="pill"><div class="swatch" style="background:#A3E635"></div><div class="p-k">素雅极简</div><div class="p-v">minimal</div></div>

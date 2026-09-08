@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style Compass · 海报 · 编辑留白版</title>
+<!--
+  style-compass 介质无关验证 · 海报 · 风格: style-editorial-calm (编辑式留白 · 冷调克制)
+  气质: 大字 + 大留白 + 低饱和中性 + 衬线/超大字 + 编辑杂志感 (此版用无衬线大字 + 灰阶, 用户偏好无衬线)
+  字体: 全无衬线开源 —— 中文思源黑体 + 英文 Montserrat/Geist
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@200;400;700;900&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F5F1; --ink:#23201C; --ink2:#4A463F; --dim:#8A867E; --faint:#C4C0B8;
+    --rule:#D9D5CD;
+    --sans:'Noto Sans SC','Montserrat',system-ui,sans-serif;
+    --en:'Montserrat','Noto Sans SC',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:#EDEAE5;color:var(--ink);font-family:var(--sans);display:grid;place-items:center;min-height:100vh;padding:36px;-webkit-font-smoothing:antialiased}
+  .poster{
+    width:min(92vw,520px);aspect-ratio:3/4;position:relative;background:var(--paper);
+    box-shadow:0 30px 70px rgba(0,0,0,.1);display:flex;flex-direction:column;padding:30px 32px 34px;
+  }
+  .top{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--en)}
+  .brand{font-size:13px;font-weight:600;color:var(--dim);letter-spacing:.04em}
+  .brand .sp{color:var(--ink);font-weight:800}
+  .meta{font-size:10px;color:var(--faint);letter-spacing:.12em;text-transform:uppercase}
+  .rule{height:1px;background:var(--rule);margin:22px 0 40px}
+
+  .head{margin-bottom:auto}
+  .tag{font-family:var(--en);font-size:10px;letter-spacing:.24em;color:var(--dim);text-transform:uppercase;margin-bottom:20px}
+  .head h1{font-weight:900;line-height:1.02;letter-spacing:-.05em;font-size:clamp(3.4rem,15vw,5rem);color:var(--ink)}
+  .head h1 span{display:block}
+  .head h1 .thin{font-weight:200;color:var(--ink2)}
+  .head h1 .accent{color:var(--ink)}
+  .lead{margin-top:34px;font-size:12.5px;color:#6E6A62;line-height:1.9;max-width:82%;font-weight:400}
+
+  .list{margin-top:auto;padding-top:8px}
+  .lrow{padding:15px 0;border-top:1px solid var(--rule);display:flex;align-items:baseline;gap:16px}
+  .lrow:last-child{border-bottom:1px solid var(--rule)}
+  .lrow .num{font-family:var(--en);font-size:10px;color:var(--faint);letter-spacing:.04em}
+  .lrow .cn{font-size:14px;font-weight:400;color:var(--ink2)}
+  .lrow .en{font-family:var(--en);font-size:10px;color:var(--faint);letter-spacing:.08em;text-transform:uppercase;margin-left:auto}
+  .lrow:nth-child(odd) .cn{color:var(--dim)}
+  .lrow:nth-child(1) .cn{font-weight:500;color:var(--ink2)}
+  .foot{margin-top:28px;display:flex;justify-content:space-between;align-items:center;font-family:var(--en)}
+  .foot .t{font-size:10px;color:var(--faint);letter-spacing:.06em}
+  .foot .t b{color:var(--ink2)}
+</style>
+</head>
+<body>
+  <div class="poster">
+    <div class="top">
+      <div class="brand"><span class="sp">STYLE</span> COMPASS</div>
+      <div class="meta">Open Source</div>
+    </div>
+    <div class="rule"></div>
+    <div class="head">
+      <div class="tag">Give AI Taste</div>
+      <h1><span>让 AI</span><span class="thin">有设计</span><span class="accent">品味</span></h1>
+      <p class="lead">把认可的高审美案例，蒸馏成介质无关的视觉规范——一套品味，网页、PPT、UI、平面通吃。</p>
+    </div>
+    <div class="list">
+      <div class="lrow"><span class="num">01</span><span class="cn">编辑留白</span><span class="en">editorial-calm</span></div>
+      <div class="lrow"><span class="num">02</span><span class="cn">暗夜玻璃</span><span class="en">dark-glass</span></div>
+      <div class="lrow"><span class="num">03</span><span class="cn">暗调辉光</span><span class="en">dark-glow</span></div>
+      <div class="lrow"><span class="num">04</span><span class="cn">撞色怪诞</span><span class="en">bold-playful</span></div>
+      <div class="lrow"><span class="num">05</span><span class="cn">素雅极简</span><span class="en">clean-minimal</span></div>
+    </div>
+    <div class="foot">
+      <div class="t"><b>规范与介质解耦</b> · 审美可参数化</div>
+      <div class="t">✦</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style Compass · 海报 · 撞色版</title>
+<!--
+  style-compass 介质无关验证 · 介质: 平面/海报 (Poster)
+  风格: style-bold-playful (高饱和撞色 · 怪诞大字) —— 与 poster.html 的 dark-glass 对照
+  字体: 全部无衬线开源 —— 中文思源黑体 Noto Sans SC, 英文 Montserrat
+  布局: 撞色大字 + 色块对撞 + "刹车"黑信息条
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@800;900&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFD400; --orange:#FF5A00; --red:#E63946; --green:#A3E635;
+    --ink:#0B0B10; --cream:#FFF6E5;
+    --sans:'Noto Sans SC','Montserrat',system-ui,sans-serif;
+    --en:'Montserrat','Noto Sans SC',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:#1a1a1a;color:var(--ink);font-family:var(--sans);display:grid;place-items:center;min-height:100vh;padding:32px;-webkit-font-smoothing:antialiased}
+  .poster{
+    width:min(92vw,520px);aspect-ratio:3/4;border-radius:0;overflow:hidden;position:relative;
+    background:var(--bg);display:flex;flex-direction:column;
+    box-shadow:0 30px 80px rgba(0,0,0,.5);border:4px solid var(--ink);
+  }
+  .top{padding:22px 24px;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:flex;align-items:center;gap:9px;font-family:var(--en);font-weight:900;font-size:15px;letter-spacing:-.03em}
+  .logo .dot{width:12px;height:12px;border-radius:50%;background:var(--orange);border:2px solid var(--ink)}
+  .mini{font-family:var(--en);font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--ink);border-bottom:3px solid var(--ink);padding-bottom:2px}
+
+  .head{padding:18px 24px 0}
+  .tag{font-family:var(--en);display:inline-block;background:var(--ink);color:var(--bg);font-size:12px;font-weight:800;letter-spacing:.22em;padding:7px 14px;margin-bottom:20px;text-transform:uppercase}
+  .head h1{font-weight:900;line-height:.98;letter-spacing:-.02em;font-size:clamp(3rem,12.5vw,4.4rem);color:var(--ink);text-transform:uppercase}
+  .head h1 .hl{color:var(--orange)}
+  .head h1 .outline{color:transparent;-webkit-text-stroke:2.5px var(--ink)}
+  .head p{font-size:13.5px;color:var(--ink);font-weight:700;margin-top:20px;max-width:88%;line-height:1.6}
+
+  .mid{margin-top:auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .block{border:3px solid var(--ink);padding:15px 15px;background:var(--bg);transition:.2s}
+  .block:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}
+  .block .k{font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--ink);opacity:.75;margin-bottom:6px}
+  .block .v{font-family:var(--en);font-size:15px;font-weight:900;color:var(--ink);letter-spacing:-.01em}
+  .b-orange{background:var(--orange)} .b-red{background:var(--red);color:var(--cream)}
+  .b-green{background:var(--green)} .b-cream{background:var(--cream)}
+  .b-red .k{color:var(--cream)} .b-red .v{color:var(--cream)}
+
+  .concept{margin-top:18px;padding:16px 24px;background:linear-gradient(100deg,var(--orange),var(--red));border-top:3px solid var(--ink);display:flex;align-items:center;justify-content:space-between}
+  .concept .l{font-size:12px;color:var(--cream);font-weight:800;line-height:1.5;max-width:72%}
+  .concept .l b{color:var(--ink)}
+  .concept .star{font-size:22px;color:var(--ink)}
+</style>
+</head>
+<body>
+  <div class="poster">
+    <div class="top">
+      <div class="logo"><span class="dot"></span> Style Compass</div>
+      <div class="mini">OPEN SOURCE</div>
+    </div>
+    <div class="head">
+      <div class="tag">Give AI Taste</div>
+      <h1>让AI<br><span class="hl">有</span><span class="outline">设计</span><br><span class="hl">品味</span></h1>
+      <p>把高审美案例蒸馏成介质无关的视觉规范，一套品味通吃。</p>
+    </div>
+    <div class="mid">
+      <div class="block b-orange"><div class="k">编辑留白</div><div class="v">editorial</div></div>
+      <div class="block b-red"><div class="k">素雅极简</div><div class="v">minimal</div></div>
+      <div class="block b-green"><div class="k">暗夜玻璃</div><div class="v">dark-glass</div></div>
+      <div class="block b-cream"><div class="k">高饱和撞色</div><div class="v">bold</div></div>
+    </div>
+    <div class="concept">
+      <div class="l"><b>五种风格 · 一种原则</b><br>规范与介质解耦，审美可参数化。</div>
+      <div class="star">✦</div>
+    </div>
+  </div>
+</body>
+</html>
