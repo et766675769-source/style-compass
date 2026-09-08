@@ -24,24 +24,23 @@
       radial-gradient(520px 300px at 5% 100%,rgba(167,139,250,.16),transparent 60%),
       linear-gradient(120deg,#0e0e16,#0a0a10);
     border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 80px rgba(0,0,0,.6);
-    padding:30px 40px;display:flex;align-items:center;gap:40px}
+    padding:26px 32px;display:flex;align-items:center;gap:28px}
   /* 左侧标题块 */
   .intro{flex:1;min-width:0}
-  .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:18px;letter-spacing:-.02em;margin-bottom:22px}
-  .brand .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:var(--glow)}
+  .brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:17px;letter-spacing:-.02em;margin-bottom:20px;white-space:nowrap}
+  .brand .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:var(--glow);flex-shrink:0;flex:none}
   .brand small{font-family:Montserrat;font-size:10px;letter-spacing:.16em;color:var(--ink-faint);font-weight:700;margin-left:6px}
-  .headline h1{font-size:clamp(2rem,4.4vw,3.3rem);letter-spacing:-.03em;font-weight:900;line-height:1.05;
-    background:linear-gradient(180deg,#fff 30%,rgba(255,255,255,.55));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .headline h1{font-size:clamp(1.8rem,3.6vw,2.8rem);letter-spacing:-.03em;font-weight:900;line-height:1.08;
+    background:linear-gradient(180deg,#fff 30%,rgba(255,255,255,.55));-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
   .headline h1 .hl{color:var(--accent);-webkit-text-fill-color:var(--accent)}
-  .headline p{color:var(--ink-dim);font-size:13.5px;margin-top:16px;max-width:440px;line-height:1.7}
+  .headline p{color:var(--ink-dim);font-size:12.5px;margin-top:14px;max-width:430px;line-height:1.65}
   /* 右侧风格块 */
-  .styles{flex:0 0 420px;display:flex;flex-direction:column;gap:0}
+  .styles{flex:0 0 292px;display:flex;flex-direction:column;gap:0}
   .styles .cap{font-family:Montserrat;font-size:10px;color:var(--ink-faint);letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px}
-  .row{display:flex;align-items:center;gap:14px;padding:11px 0;border-top:1px solid var(--line)}
-  .row:last-child{border-bottom:1px solid var(--line)}
-  .row .sw{width:16px;height:16px;border-radius:5px;flex-shrink:0}
-  .row .cn{font-size:13px;font-weight:700;color:var(--ink);width:86px}
-  .row .en{font-family:Montserrat;font-size:11px;color:var(--ink-faint);margin-left:auto;letter-spacing:.04em}
+  .row{display:flex;align-items:center;gap:12px;margin:10px 0}
+  .row .sw{width:14px;height:14px;border-radius:4px;flex-shrink:0}
+  .row .cn{font-size:12.5px;font-weight:600;color:var(--ink);width:78px}
+  .row .en{font-family:Montserrat;font-size:10px;color:var(--ink-faint);margin-left:auto;letter-spacing:.02em}
 </style>
 </head>
 <body>
