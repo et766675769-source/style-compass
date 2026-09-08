@@ -13,10 +13,10 @@ AI Agent 生成的视觉内容（网页 / UI / PPT / 海报）普遍存在同质
 
 ```bash
 # 通过 agent-skills CLI 安装（扫描本仓库 skills/ 目录）
-npx skills add https://github.com/ethanlee/style-compass
+npx skills add https://github.com/et766675769-source/style-compass
 
 # 或指定安装单一技能
-npx skills add https://github.com/ethanlee/style-compass --skill "style-compass"
+npx skills add https://github.com/et766675769-source/style-compass --skill "style-compass"
 ```
 
 也可以直接把 `skills/style-compass/SKILL.md` 及其 `references/` 复制进项目或对话中使用。
