@@ -19,6 +19,9 @@
     background:radial-gradient(560px 320px at 82% 10%,rgba(232,93,58,.5),transparent 60%),
       radial-gradient(500px 320px at 6% 100%,rgba(255,179,71,.3),transparent 60%),
       radial-gradient(360px 280px at 55% 55%,rgba(232,93,58,.16),transparent 60%)}
+  /* 胶片噪点层 */
+  .banner::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
   .inner{position:relative;z-index:1;display:flex;align-items:center;gap:40px;padding:30px 40px;flex:1}
   .left{flex:1.5;min-width:0}
   .brand{display:flex;align-items:center;gap:9px;font-family:var(--en);font-weight:700;font-size:15px;margin-bottom:24px;white-space:nowrap}
@@ -31,7 +34,8 @@
   .lead{margin-top:22px;font-size:13px;color:var(--dim);line-height:1.8;max-width:430px}
   .right{flex:1;display:flex;flex-direction:column;justify-content:center}
   .right .cap{font-family:var(--en);font-size:10px;color:var(--dim);letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px}
-  .row{display:flex;align-items:center;gap:14px;padding:12px 16px;border:1px solid var(--line);border-radius:13px;background:rgba(255,235,217,.04);backdrop-filter:blur(5px);margin-bottom:11px}
+  .row{display:flex;align-items:center;gap:14px;padding:12px 16px;border:1px solid var(--line);border-radius:13px;background:rgba(255,235,217,.04);backdrop-filter:blur(5px);margin-bottom:11px;transition:transform .6s cubic-bezier(.32,.72,0,1),background .6s cubic-bezier(.32,.72,0,1)}
+  .row:hover{transform:translateX(4px);background:rgba(255,235,217,.07)}
   .row .dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;box-shadow:0 0 12px currentColor}
   .row .cn{font-size:13px;font-weight:700;color:var(--ink)}
   .row .en{font-family:var(--en);font-size:10px;color:var(--dim);margin-left:auto;letter-spacing:.04em}
